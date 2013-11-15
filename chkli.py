@@ -1,8 +1,11 @@
+#!/usr/bin/python
 from Tkinter import *
 import tkFileDialog
 import sys
 import re
 import time      #For sleep test
+
+eo = "/jac_sw/itsroot/install/jcmtHndshk/data/eo.txt"
 
 def chelp():
     print "Usage:"
@@ -26,6 +29,7 @@ reads a text file:  '-' Item   '+' sub item   '*'warning'''
         w = re.compile('^\*')
         for line in of:
             line.strip()
+            line = line[:-1]
             if i.match(line):
                 if item:
                     li.append(item)
@@ -192,7 +196,13 @@ class GuiChk(Tk):
     def check(self, n):
         if len(self.lio)-1 >= n+1:
             self.lio[n+1].enable()
+
+fname = None
+if len(sys.argv) > 1:
+    if sys.argv.index('-eo'):
+        print "using: " + eo
+        fname = eo
     
-app = GuiChk(None, None)
+app = GuiChk(None, fname)
 app.title('Gui Check')
 app.mainloop()
