@@ -1,42 +1,10 @@
-Arm- Turn on polycom and contact TSS
-- Check with TSS about weather and faults that might prevent EO
-- Turn on PC and confirm JCMT cameras are live
-- Handshake: Click I'm here button
-+ Run: handshake_up
-* Can do while observations are running.
-- Run: eo_up
-* Can do while observations are running.
-- Check for red on PLC Status display
-- Press: Remote on PLC Status display
-+ No observations in the queue.
-+ Wait for TSS to switch EO lockout to 'Off'
-*** Must wait for obsevations to complete
-- Confirm current pointing and focus with TSS
-+ Note pointing and focus
-** Might need to manually input after scuba2nuke.
-- Run up Scuba2
-+ ssh ocsmaster
-+ scuba2_nuke (wait)
-+ scuba2_script (?)
-+ scuba2_up
-** Use another terminal window
-- Run scuba2Reduce
-+ Wait for TSS to nuke their QL
-+ ssh acsis10
-- Click for both Freqs on the Reduce gui
-- On SCUBA-2 JOS -> Load_inst "SCUBA-2"
-- ditscmd SMU@smut FOCUS_SET X=0.01 Y=0.03 Z=0.15
-* On ocsmaster
-- Confirm no weather or other issues that may prevent EO
-- Confirm Telescope is operational
-+ Start queue
-- Handover from TSS to EO
-* TSS is free to leave after this.
-- Send out E-mail to staff
-* In remote operations and now RWL
-- Monitor Weather
-+ enviromon, WVM stripchart, and/or smamon
-*** Not done until end of operation
-- Close Roof and Doors
-** Ensure observations are complete unless weather problems
+- Test several different checklists
++ check how many checklists there are.
++ decide the best way to test
+*** Might induce migraines
+- Find people with constructive criticism
++ Throw out the mockers
+** Don't throw away the helpful ones!
+- Finish!
+* Horray!
 

@@ -3,9 +3,8 @@ from Tkinter import *
 import tkFileDialog
 import sys
 import re
-import time      #For sleep test
 
-eo = "/jac_sw/itsroot/install/jcmtHndshk/data/eo.txt"
+eo = 'eo.txt'
 
 def chelp():
     print "Usage:"
